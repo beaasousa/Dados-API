@@ -8,6 +8,9 @@ builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
 
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
 app.MapGet("/dado/d{numeroDeFaces}", (
 
    [FromRoute] int numeroDeFaces
